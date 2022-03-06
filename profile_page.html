@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prof.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <img style="border-radius: 15px;" src="https://picsum.photos/200"></img>
+            <br>
+            <h1>Good Day <h1 id="firstname"><h1></h1>
+            <br>
+            <h1>Tutors you have signed up for:</h1>
+            <br>
+            <h1 id="Tutors"></h1>
+        </div>
+        <br>
+        <h1>Tutor Recommended for you today:</h1>
+        <div class="title2">
+            <img style="border-radius: 15px;" src="https://picsum.photos/300"></img>
+            <br>
+            <h1 id="firstname2"></h1>
+            <h1 id="subject"></h1>
+            <br>
+            <button onclick="popup()">Sign Up With This Tutor!</button>
+        </div>
+    </div>
+    <script>
+        function randomName() {
+            var firstname = ["Kevin", "Arnav", "John", "Natasha", "Danny"];
+            var lastname = ["Kores", "Pandey", "Lee", "Glatsavik", "Black"];
+            var rand_first = Math.floor(Math.random() * firstname.length);
+            var rand_last = Math.floor(Math.random() * lastname.length);
+            var first = document.getElementById('firstname');
+            var last = document.getElementById('lastname');
 
+            first.innerText = firstname[rand_first]+" "+lastname[rand_last]
+            // last.value = lastname[rand_last];
+        }
+        window.onload = randomName();
+        function randomName2() {
+                var firstname = ["John", "Kole", "Larry", "Neil", "Amanda"];
+                var lastname = ["Tores", "Yupin", "Puthan", "Simon", "Black"];
+                var rand_first = Math.floor(Math.random() * firstname.length);
+                var rand_last = Math.floor(Math.random() * lastname.length);
+                var first = document.getElementById('firstname2');
+                var last = document.getElementById('lastname');
+
+                first.innerText = firstname[rand_first] + " " + lastname[rand_last]
+                // last.value = lastname[rand_last];
+        }
+        window.onload = randomName2();
+        function RandomSubject(){
+            var subject = ['Math', 'English', 'Algebra','History','Spanish','French','Physics','Chemistry','Science']
+            var rand_sub = Math.floor(Math.random() * subject.length);
+            var rand_sub2 = Math.floor(Math.random() * subject.length);
+            var subjectt = document.getElementById("subject")
+            subjectt.innerText = subject[rand_sub] + ", " + subject[rand_sub2];
+        }
+        window.onload = RandomSubject();
+        function popup(){
+            stuff = document.getElementById("firstname2").innerText;
+            sub = document.getElementById("subject").innerText;
+            alert("You have signed up for "+stuff+" for subject "+sub);
+            document.getElementById("Tutors").innerText = "You have signed up for " + stuff + " for subject " + sub;
+        }
+    </script>
+</body>
+</html>
