@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit:300,400');
 
-
 * {
     box-sizing: border-box;
     font-family: Kanit;
     color: black;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
+html {
+    background-color: #90EE90;
+}
+
+.Lorem {
+    border-radius: 25px;
+    width: 65%;
+    border: 10px solid green;
+    margin: .5%;
+    padding: 1%;
+    background-color: #90EE90;
 }
 
 .top ul {
@@ -27,6 +34,7 @@ html, body {
     padding: .5em;
     color: rgb(0, 0, 0);
     text-decoration: none;
+    font-family: Gravitas One, cursive;
 }
 
 .top {
@@ -45,4 +53,8 @@ html, body {
     background-color: rgba(133, 133, 133);
     background-size: cover;
     padding-bottom: 30px
+}
+
+.footer {
+    text-align: center;
 }
